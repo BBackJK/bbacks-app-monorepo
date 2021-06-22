@@ -1,0 +1,7 @@
+<a *ngIf="link" [href]="link" [target]="isBlank ? '_blank' : '_self'">
+  <ng-content></ng-content>
+</a>
+
+<a *ngIf="!link" [target]="isBlank ? '_blank ' : '_self'" >
+  <ng-content></ng-content>
+</a>

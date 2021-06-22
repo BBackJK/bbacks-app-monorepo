@@ -1,0 +1,10 @@
+<div class="menu-bar-contents">
+  <ul>
+    <li routerLink="/diary" [ngClass]="{ 'current' : currentUrl.includes(MENU_DIARY) }">
+      <a>다이어리</a>
+    </li>
+    <li routerLink="/calendar" [ngClass]="{ 'current' : currentUrl.includes(MENU_CALENDAR) }">
+      <a>캘린더</a>
+    </li>
+  </ul>
+</div>

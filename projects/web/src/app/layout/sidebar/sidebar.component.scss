@@ -1,0 +1,52 @@
+@import '../../app.component.scss';
+
+.side-bar-contents {
+  position: absolute;
+  width: 400px;
+  right: 0px;
+  background: $bright;
+  height: 100%;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  padding: 20px;
+}
+
+ul {
+  margin-top: 60px;
+  cursor: pointer;
+}
+
+li {
+  padding: 10px;
+  margin: 5px;
+  
+  font-size: 2rem;
+  transition: all ease-in-out 500ms;
+
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+li:hover {
+  background-color: getPrimaryColor();
+
+  & > a {
+    color: $bright;
+  }
+}
+
+.nav-toggle {
+  display: inline;
+  float: right;
+  font-size: 35px;
+  
+  &:hover > span {
+    color: getPrimaryColor(darken);
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out 300ms;
+  }
+}

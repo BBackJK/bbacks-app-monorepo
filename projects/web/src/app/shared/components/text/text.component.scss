@@ -1,0 +1,98 @@
+@import '../../../app.component.scss';
+
+/**
+* ==========================================================
+* Text
+* ==========================================================
+* - Text Color
+* - Text Size
+*/
+
+/** 
+*
+*   Text Color
+*
+* - dark        : black (default)
+* - bright      : white
+* - disabled    : gray
+* - error       : red
+* - primary     : primary color meta
+* - secondary   : secondary color meta
+*/
+.text-color-dark {
+  color: $text-dark-color;
+}
+.text-color-bright {
+  color: $text-bright-color;
+}
+.text-color-disabled {
+  color: $disabled-text-color;
+}
+.text-color-error {
+  color: $error-color;
+}
+
+.text-color-gray {
+  color: $disabled-text-color;
+}
+
+.text-color-primary {
+  color: getPrimaryColor();
+}
+
+.text-color-secondary {
+  color: getSecondaryColor();
+}
+
+/** 
+*
+*   Text Size
+*
+* - xs        : xsmall
+* - sm        : small
+* - md        : medium (default)
+* - lg        : large
+* - xl        : x large
+*/
+
+.text-size-xs {
+  font-size: 0.8rem;
+}
+
+.text-size-sm {
+  font-size: 1.2rem;
+}
+
+.text-size-md {
+  font-size: getFontSize(base-rem);
+}
+.text-size-lg {
+  font-size: 2rem;
+}
+
+.text-size-xl {
+  font-size: 2.5rem;
+}
+
+.text-size-title {
+  font-size: 3rem;
+}
+
+.text-size-max {
+  font-size: 8rem;
+}
+
+/** 
+*
+*   Text Display Type
+*
+* - inline        : inline style (default)
+* - block         : display style
+*/
+.text-display-inline {
+  display: inline;
+}
+
+.text-display-block {
+  display: block;
+}

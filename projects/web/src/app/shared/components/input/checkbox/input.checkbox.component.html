@@ -1,0 +1,27 @@
+<!-- input in form start -->
+<label class="checkbox-container" [ngClass]="[displayClassName]" *ngIf="formGroup; else standAlone">
+  <span class="checkbox-contents">{{ label }}</span>
+  <input type="checkbox" [name]="formName" [value]="value" (change)="onChecked($event)" />
+  <span class="checkbox-mark"></span>
+</label>
+<!-- input in form end -->
+
+<!-- checkbox standalone start -->
+<ng-template #standAlone>
+  <label class="checkbox-container" [ngClass]="[displayClassName]" *ngIf="formControl; else noFormControl">
+    <span class="checkbox-contents">{{ label }}</span>
+    <input type="checkbox" [formControl]="formControl" />
+    <span class="checkbox-mark"></span>
+  </label>
+</ng-template>
+<!-- checkbox standalone end -->
+
+<!-- input no form start -->
+<ng-template #noFormControl>
+  <label class="checkbox-container" [ngClass]="[displayClassName]">
+    <span class="checkbox-contents">{{ label }}</span>
+    <input type="checkbox" [name]="groupName" [value]="value" />
+    <span class="checkbox-mark"></span>
+  </label>
+</ng-template>
+<!-- input no form end -->

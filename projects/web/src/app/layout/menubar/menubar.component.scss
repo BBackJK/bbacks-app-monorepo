@@ -1,0 +1,69 @@
+@import '../../app.component.scss';
+
+.menu-bar-contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // border-bottom: 3px solid getPrimaryColor();
+  // overflow: hidden;
+  // width: 90%;
+  // border-bottom: 3px solid getPrimaryColor();
+}
+
+ul {
+  border: 2px solid getPrimaryColor();
+  border-radius: 20px;
+  overflow: hidden;
+  width: 90%;
+  box-shadow: $default-box-shadow;
+}
+
+li {
+  float: right;
+  font-size: 2.5rem;
+  margin-right: 20px;
+  padding: 10px;
+  cursor: pointer;
+
+  transition: all ease-in-out 300ms;
+  
+  border-radius: 10px;
+
+  &.current {
+    font-size: 2.875rem;
+
+    & > a {
+      color: getPrimaryColor();
+    }
+  }
+
+  &:hover:not(.current) {
+    // background-color: getPrimaryColor();
+    transform: scale(1.15);
+
+    & > a {
+      color: getPrimaryColor();
+
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   left: 0;
+      //   bottom: -1px;
+      //   height: 3px;
+      //   // background: getPrimaryColor();
+      //   background: $bright;
+      //   width: 100%;
+      //   -webkit-transition: $default-transition;
+      //   transition: $default-transition;
+      //   -webkit-transform: scaleX(0) translate3d(0, 0, 0);
+      //   transform: scaleX(0) translate3d(0, 0, 0);
+      // }
+
+      // &:hover::before {
+      //   -webkit-transform: scaleX(1);
+      //   -ms-transform: scaleX(1);
+      //   transform: scaleX(1);
+      // }
+    }
+  }
+}

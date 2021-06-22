@@ -1,0 +1,13 @@
+<!-- <div *ngIf="type === 'inline'" [ngClass]="[textSizeClassName, textColorClassName]">
+  <ng-content></ng-content>
+</div>
+<div *ngIf="type === 'block'" [ngClass]="[textSizeClassName, textColorClassName]">
+  <ng-content></ng-content>
+</div> -->
+
+<!-- <div *ngIf="type === 'inline'" [ngClass]="[textSizeClassName, textColorClassName]">
+  <ng-content></ng-content>
+</div> -->
+<div [ngClass]="[textSizeClassName, textColorClassName, displayClassName]">
+  <ng-content></ng-content>
+</div>

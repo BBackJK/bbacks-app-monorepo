@@ -1,0 +1,36 @@
+@import '../../../app.component.scss';
+
+.register-form-wrapper {
+  border-radius: 20px;
+  box-shadow: $default-box-shadow;
+  padding: 10px;
+}
+
+.register-form-title {
+  margin: 10px;
+  padding: 10px;
+  
+  border-bottom: 3px solid getPrimaryColor();
+}
+
+.register-form__input__label__group {
+  padding: 10px;
+  // display: block;
+}
+
+.register-form__input, .register-form__label {
+  display: inline-block;
+  padding: 10px;
+}
+
+.register-form__label {
+  text-align: center;
+  width: 150px;
+}
+
+.register-form__button__group {
+  float: right;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}

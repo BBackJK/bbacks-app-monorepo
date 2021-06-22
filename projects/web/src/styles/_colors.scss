@@ -1,0 +1,83 @@
+/**
+* ==========================================================
+* Color System 
+* ==========================================================
+* - Primary Color and Secondary Color
+* - Primary Color and Secondary Color Variants
+* - Additional UI color ; background, surface, errors, typography ...
+* - Generic Colors
+* - 3rd party Brand Colors ; twitter, facebook, ... 
+*/
+
+
+/** 
+*   Generic Colors
+* - 일반적인 색상 정의
+*/
+$blue                         :#288ad6;
+$green                        :#16c98d;
+$red                          :#fa5e5b;
+$yellow                       :#feef6d;
+$orange                       :#fe7c08;
+$pink                         :#ff708e;
+$purple                       :#8e44ad;
+$gray                         :#95a5a6;
+
+$dark                         :#000;
+$bright                       :#fff;
+
+
+/** 
+*   Primary Color
+* - 주로 사용하는 색상  
+* - Main color
+*/
+$primary-colors: (
+  base            : #6200EE,
+  darken          : #3700b3,
+  brighten        : #b894f6,
+);
+
+
+/** 
+*   Secondary Color
+* - 강조하거나 구별할 때 사용
+* - Sub color
+*/
+$secondary-colors: (
+  brighten        : #03DAC5,
+  base            : #00b798,
+  darken          : #009a77
+);
+
+
+/** 
+*   Additional UI color ; background, surface, errors, typography ...
+* - 추가적으로 사용하는 색상 
+* - background와 surface는 주로 #fff 사용.
+* - error는 경고 혹은 에러와 같은 색상, 주로 빨간계열 사용.
+*/
+$background-default-color: $bright;
+$surface-default-color: $bright;
+$text-dark-color: $dark; // default
+$text-bright-color: $bright;
+$disabled-text-color: darken($gray, 10%);
+$disabled-color: lighten($gray, 30%);
+$error-color: $red;
+
+
+
+/** 
+*   3rd party brand colors - find more at brandcolors.net
+* - 유명한 서비스 브랜딩 칼라 정의
+*/
+$color-twitter                :#55acee;
+$color-facebook               :#3b5998;
+$color-youtube                :#cd201f;
+$color-pinterest              :#bd081c;
+$color-instagram              :#e4405f;
+$color-whatsapp               :#25d366;
+
+
+/* <hr/> tag color */
+$hr-color                     :lighten($dark, 70%);

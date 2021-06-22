@@ -1,0 +1,82 @@
+@import '../../../../app.component.scss';
+
+input {
+  padding: 5px;
+  height: 4.5rem;
+  // border-bottom: {
+  //   color: $dark;
+  //   width: 2px;
+  //   style: solid;
+  // };
+
+  border-radius: 3px;
+
+  &:focus {
+    outline: none !important;
+    transition: all 100ms ease-in-out;
+    border: {
+      width: 2px;
+      style: solid;
+      radius: 10px;
+      color: getPrimaryColor();
+    }
+
+    box-shadow: $default-box-shadow;
+
+    &.error {
+      border-color: $error-color;
+    }
+  }
+
+  &.error {
+    border-color: $error-color;
+    animation: vibration .1s 3;
+  }
+}
+
+.input-width-xshort {
+  width: 4rem;
+}
+
+.input-width-short {
+  width: 15rem;
+}
+
+.input-width-default {
+  width: 30rem;
+}
+
+.input-width-long {
+  width: 50rem; 
+}
+
+.input-width-max {
+  width: 100%;
+}
+
+
+
+.input-display-block {
+  display: block;
+}
+
+.input-display-inline {
+  display: inline;
+}
+
+// .error {
+//   border-color: $error-color;
+//   animation-name: vibration;
+//   animation-duration: 0.2s;
+//   animation-iteration-count: infinite;
+// }
+
+@keyframes vibration {
+  from {
+    transform: translateX(5px);
+  }
+
+  to {
+    transform: translateX(-5px);
+  }
+}

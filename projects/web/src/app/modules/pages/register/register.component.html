@@ -1,0 +1,58 @@
+<app-flex-container>
+  <div class="register-form-wrapper">
+    <div class="register-form-title">
+      <app-text type="block" textSize="title">
+        회원가입
+      </app-text>
+    </div>
+    <form>
+      <div class="register-form__input__group">
+        <div class="register-form__input__label__group">
+          <div class="register-form__label">
+            <app-text textSize="lg">이메일</app-text>
+          </div>
+          <div class="register-form__input">
+            <app-input placeholder="이메일을 입력하세요!" display="inline"></app-input>
+          </div>
+        </div>
+        <div class="register-form__input__label__group">
+          <div class="register-form__label">
+            <app-text textSize="lg">비밀번호</app-text>
+          </div>
+          <div class="register-form__input">
+            <app-input placeholder="규칙) 숫자+영어+특수문자" display="inline"></app-input>
+          </div>
+        </div>
+        <div class="register-form__input__label__group">
+          <div class="register-form__label">
+            <app-text textSize="lg">비밀번호 확인</app-text>
+          </div>
+          <div class="register-form__input">
+            <app-input placeholder="비밀번호를 재입력하세요!" display="inline"></app-input>
+          </div>
+        </div>
+        <div class="register-form__input__label__group">
+          <div class="register-form__label">
+            <app-text textSize="lg">이름</app-text>
+          </div>
+          <div class="register-form__input">
+            <app-input placeholder="이름을 입력하세요!" display="inline"></app-input>
+          </div>
+        </div>
+        <div class="register-form__input__label__group">
+          <div class="register-form__label">
+            <app-text textSize="lg">휴대폰</app-text>
+          </div>
+          <div class="register-form__input">
+            <app-input placeholder="휴대폰 번호를 입력하세요!" display="inline"></app-input>
+          </div>
+        </div>
+      </div>
+      <div class="register-form__button__group">
+        <app-button color="primary">등록</app-button>
+        <app-button display="bordered" color="primary">리셋</app-button>
+        <app-button display="bordered" (click)="goBack()">뒤로가기</app-button>
+      </div>
+    </form>
+  </div>
+</app-flex-container>

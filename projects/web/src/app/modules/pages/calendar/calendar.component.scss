@@ -1,0 +1,171 @@
+@import '../../../app.component.scss';
+
+.calendar-header {
+  display: flex;
+  justify-content: space-around;
+  font-size: 4rem;
+
+  padding: 10px;
+
+  // & > div {
+  //   cursor: pointer;
+  // }
+}
+
+.calendar-header__prev, .calendar-header__next {
+  cursor: pointer;
+}
+
+.calendar-body {
+  margin: 10px;
+}
+
+.calendar-body__day {
+  border-top: 5px double getPrimaryColor(darken);
+
+  border-bottom: 3px solid getPrimaryColor(darken);
+  padding: 10px;
+
+  font-size: 3rem;
+  font-weight: bold;
+
+  & > ul {
+    overflow: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  & > ul > li {
+    float: left;
+  }
+}
+
+.calendar-body__date {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar-body__date__card-wrapper {
+  // 145.88px
+  // 20px : 2rem;
+  flex: 1 1 12%;
+  margin: 5px;
+  height: 200px;
+  transition: all ease-in-out 200ms;
+  padding: 1px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  // 이번달인 날짜 카드들 hover시 효과
+  &:hover.today-date {
+    cursor: pointer;
+    border: 3px solid getPrimaryColor();
+    border-radius: 10px;
+    box-shadow: $default-box-shadow;
+  }
+
+  // 선택한 날짜 표시.
+  &.select-mark.today-date {
+    border: 3px solid getPrimaryColor();
+    border-radius: 10px;
+    box-shadow: $default-box-shadow;
+  }
+
+  // 선택한 날짜 hover시 tooltip 제공
+  &.today-date.select-mark:hover > .calendar-body__date__card-tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  & > .calendar-body__date__card-tooltip {
+    // opacity: 0;
+    // visibility: hidden;
+    // position: absolute;
+    // max-width: 300px;
+    // padding: 10px;
+    // border-radius: 12px;
+    // transform: translate(-3.2rem, -6rem);
+    // font-size: 1.4rem;
+    // background-color: getPrimaryColor();
+    // color: $bright;
+    // transition: all ease-in-out 300ms;
+
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    // max-width: 270px;
+    width: 27rem;
+    padding: 10px;
+    border-radius: 12px;
+
+    // margin-left: -25px;
+    // margin-top: -50px;
+
+    margin-left: -2.5rem;
+    margin-top: -5rem;
+
+    font-size: 1.4rem;
+    background-color: getPrimaryColor();
+    color: $bright;
+    transition: all ease-in-out 300ms;
+  }
+}
+
+
+.calendar-body__date__card-header {
+
+  font-size: 1.4rem;
+
+  color: $gray;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+
+  & > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all ease-in-out 300ms;
+  }
+}
+
+.today-date > .calendar-body__date__card-header {
+  color: $dark; 
+  font-size: 1.9rem;
+
+  &.today-mark > div {
+    background-color: getSecondaryColor();
+  }
+
+  &.select-mark > div {
+    background-color: getPrimaryColor();
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    color: $bright;
+  }
+}
+
+.calendar-body__date__card-body {
+  padding: 10px;
+}
+
+.calendar-body__date__card-footer { 
+  // padding: 10px;
+  transition: all ease-in-out 500ms;
+  height: 24px;
+  margin: 10px;
+
+  & > img {
+    border-radius: 50%;
+    box-shadow: $default-box-shadow;
+  }
+}

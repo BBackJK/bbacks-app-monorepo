@@ -1,0 +1,88 @@
+@import '../../../../app.component.scss';
+
+.calendar-detail-container {
+  position: absolute;
+  width: 80rem;
+  height: 60rem;
+  background: $bright;
+  border-radius: 12px;
+  padding: 20px;
+
+  // header, contents, footer 배치
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calendar-detail-header {
+  border-bottom: 5px solid getPrimaryColor();
+  padding: 10px;
+}
+
+.calendar-detail-contents {
+  overflow: auto;
+  padding: 10px;
+}
+
+.calendar-detail-footer {
+  padding: 10px;
+  text-align: right;
+
+  // & > img {
+  //   box-shadow: $default-box-shadow;
+  //   border-radius: 50%;
+  //   cursor: pointer;
+  // }
+
+  & > .calendar-detail-footer__icon {
+    float: right;
+    // border: 2px solid red;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    background-color: getPrimaryColor();
+    box-shadow: $default-box-shadow;
+    cursor: pointer;
+
+    transform: rotate(0deg);
+    transition: 0.2s;
+
+    &.add-icon {
+      transform: rotate(45deg);
+      transition: 0.2s;
+    }
+
+    & > section > div {
+      background-color: $bright;
+      border-radius: 10px;
+    }
+
+    & > section > .calendar-detail-footer__icon__add__one {
+      height: 36px;
+      width: 4px;
+      margin-left: 20px;
+      margin-top: 3px;
+    }
+
+    & > section > .calendar-detail-footer__icon__add__two {
+      height: 4px;
+      width: 36px;
+      margin-top: -19px;
+      margin-left: 4px;
+    }
+
+    & > section > .calendar-detail-footer__icon__cancel__one {
+      height: 36px;
+      width: 4px;
+      margin-left: 20px;
+      margin-top: 3px;
+    }
+
+    & > section > .calendar-detail-footer__icon__cancel__two {
+      height: 4px;
+      width: 36px;
+      margin-top: -19px;
+      margin-left: 4px;
+    }
+  }
+}

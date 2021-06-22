@@ -1,0 +1,27 @@
+@import '../../../../app.component.scss';
+
+.modal-search-container {
+  width: 600px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: $bright;
+  border-radius: 10px;
+}
+
+.modal-search-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.modal-search-label > span {
+  transition-property: all;
+  transition-delay: 300ms;
+}
+
+img {
+  margin-left: 10px;
+  cursor: pointer;
+}
