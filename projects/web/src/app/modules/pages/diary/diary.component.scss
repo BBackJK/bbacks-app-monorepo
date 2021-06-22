@@ -1,0 +1,102 @@
+@import '../../../app.component.scss';
+
+.diary-title {
+  padding: 20px;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.diary-card-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.diary-card-title {
+  padding: 10px;
+
+  & > span {
+    float: right;
+  }
+}
+
+.diary-card-wrapper {
+  flex: 0 1 30%;
+  margin: 10px; // 카드끼리의 중간 여백 지정
+  padding: 10px;
+
+  transition: all ease-in-out 0.3s;
+  border-radius: 20px;
+  box-shadow: $default-box-shadow;
+
+  &:hover {
+    border: 3px solid getPrimaryColor();
+  }
+}
+
+.diary-card-title {
+
+  &:hover {
+    & + .diary-card-contents {
+      height: 100%;
+      opacity: 1;
+    }
+  }
+}
+
+.diary-card-contents {
+  // display : none 이 transition이 안먹혔을 때 사용하는 방법 height.
+  margin: 10px;
+  transition: all ease-in-out 0.2s;
+
+  opacity: 0;
+  height: 0vh;
+
+  &:hover {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+.diary-card-btn {
+  
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: getSecondaryColor();
+  box-shadow: $default-box-shadow;
+  cursor: pointer;
+
+  transition: $default-transition;
+
+  position: fixed;
+  bottom: 50px;
+  right: 80px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  & > div {
+    // background-color: getSecondaryColor(darken);
+    background-color: $dark;
+    border-radius: 10px;
+  }
+
+  & > .diary-card-btn__icon__one {
+    height: 36px;
+    width: 4px;
+    margin-left: 20px;
+    margin-top: 3px;
+  }
+
+  & > .diary-card-btn__icon__two {
+    height: 4px;
+    width: 36px;
+    margin-top: -19px;
+    margin-left: 4px;
+  }
+}

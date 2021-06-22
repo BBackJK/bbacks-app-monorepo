@@ -1,0 +1,25 @@
+<app-shadow-cover display="center">
+  <div class="calendar-detail-container" appClickOutSide (clickOutSide)="closeDetail()">
+    <div class="calendar-detail-header">
+      <app-text textSize="title">
+        {{ year }}. {{ month }}. {{ date }}
+      </app-text>
+    </div>
+    <div class="calendar-detail-contents">
+      <div *ngIf="changeFlag" [@fadeInOut]>
+        <app-calendar-add></app-calendar-add>
+      </div>
+      <div *ngIf="!changeFlag" [@fadeInOut]>
+        일정이 없습니다. <br/>
+      </div>
+    </div>
+    <div class="calendar-detail-footer">
+      <div class="calendar-detail-footer__icon" (click)="changeAddPage()" [ngClass]="{ 'add-icon': changeFlag }">
+        <section>
+          <div class="calendar-detail-footer__icon__cancel__one"></div>
+          <div class="calendar-detail-footer__icon__cancel__two"></div>
+        </section>
+      </div>
+    </div>
+  </div>
+</app-shadow-cover>

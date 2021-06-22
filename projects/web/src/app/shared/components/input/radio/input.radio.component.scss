@@ -1,0 +1,112 @@
+@import '../../../../app.component.scss';
+
+
+input[type="radio"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.radio-wrapper-label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  align-items: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  // padding: 7px;
+
+
+  &:hover .radio-outer-circle {
+    border: {
+      color: getPrimaryColor();
+    };
+  }
+}
+
+.radio-circle-container {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+input[type="radio"]:checked {
+  & + .radio-outer-circle {
+    border: {
+      color: getPrimaryColor();
+    }
+
+
+    & + .radio-inner-circle {
+      visibility: visible;
+      background: {
+        color: getPrimaryColor();
+      };
+      transform: scale(0.5);
+    }
+  }
+}
+
+.radio-outer-circle {
+  box-sizing: border-box;
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: border-color ease 280ms;
+  width: 20px;
+  border: {
+    width: 2px;
+    style: solid;
+    radius: 50%;
+    color: $dark;
+  };
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+.radio-inner-circle {
+  visibility: hidden;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: block;
+  height: 20px;
+  width: 20px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: transform ease 280ms, background-color ease 280ms;
+  transform: scale(0.001);
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+.radio-contents {
+  padding: 3px;
+}
+
+.display-inline-flex {
+  display: inline-flex;
+
+  & .radio-contents {
+    padding-right:10px;
+  }
+}
+
+.display-flex {
+  display: flex;
+}

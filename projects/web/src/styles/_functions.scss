@@ -1,0 +1,33 @@
+// get value in scss map
+@function getValue($map: '', $val) {
+  @if not map-has-key($map, $val) {
+    @warn "No value in `#{$map}` map for `#{$val}`";
+  } 
+
+  @return map-get($map, $val);
+}
+
+// get break points
+@function getBp($val) {
+  @return getValue($breakpoints, $val);
+}
+
+// get z index
+@function getZIndex($val) {
+  @return getValue($zIndexs, $val);
+}
+
+// get primary color
+@function getPrimaryColor($val: base) {
+  @return getValue($primary-colors, $val);
+}
+
+// get secondary color
+@function getSecondaryColor($val: brighten) {
+  @return getValue($secondary-colors, $val);
+}
+
+// get font size
+@function getFontSize($val: base-rem) {
+  @return getValue($fontsizes, $val);
+}

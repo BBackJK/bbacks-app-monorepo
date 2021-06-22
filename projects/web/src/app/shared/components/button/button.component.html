@@ -1,0 +1,8 @@
+<button 
+  [type]="type" 
+  (click)="onClick()" 
+  [ngClass]="[sizeClassName, colorClassName, displayClassName]" 
+  [disabled]="isDisabled"
+>
+  <ng-content></ng-content>
+</button>

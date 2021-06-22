@@ -1,0 +1,89 @@
+@import '../../../app.component.scss';
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form-wrapper {
+  border-radius: 20px;
+  box-shadow: $default-box-shadow;
+  padding: 10px;
+}
+
+.login-form-title {
+  padding: 10px;
+  margin-bottom: 10px;
+
+  border-bottom: 3px solid getPrimaryColor();
+}
+
+.login-form__input__group {
+  margin-bottom: 40px;
+}
+
+.login-form__input__label__group {
+  margin: 20px;
+  margin-top: 30px;
+}
+
+.login-form__helper__group {
+  text-align: right;
+  margin-top: 10px;
+  margin-right: 13px;
+  padding: 5px;
+}
+
+.login-form__button__group {
+  display: block;
+  text-align: center;
+  width: 100%;
+
+  & > button {
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: baseline;
+    overflow: visible;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.9s, color 0.3s;
+
+    background-color: getPrimaryColor();
+    color: $bright;
+
+    margin-bottom: 5px;
+
+    height: 50px;
+    width: 90%;
+    border: 2px solid getPrimaryColor();
+
+    font-size: 2rem;
+    &:disabled {
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+
+    &:hover:not(:disabled) {
+      background-color: $bright;
+      color: getPrimaryColor();
+    }
+  }
+}
+
+.login-form__helper__link {
+  font-size: 1.5rem;
+  color: getSecondaryColor();
+  padding: 2px;
+  transition: $default-transition;
+  cursor: pointer;
+
+  &:hover {
+    color: getPrimaryColor();
+    text-decoration: 3px underline;
+  }
+}

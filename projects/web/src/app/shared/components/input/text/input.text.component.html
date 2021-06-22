@@ -1,0 +1,21 @@
+<!-- input in form start -->
+<input 
+  *ngIf="formControl; else noControl" 
+  [type]="type" 
+  [formControl]="formControl" 
+  [placeholder]="placeholder"
+  [required]="required" 
+  [ngClass]="[widthClassName, displayClassName, errorClassName]" 
+/>
+<!-- input in form end -->
+
+<!-- input no form start -->
+<ng-template #noControl>
+  <input 
+    [type]="type" 
+    [placeholder]="placeholder" 
+    [required]="required" 
+    [ngClass]="[widthClassName, displayClassName, errorClassName]" 
+  />
+</ng-template>
+<!-- input no form end -->

@@ -1,0 +1,46 @@
+<div class="calendar-header">
+  <div (click)="selectMonth(selectMonthValue - 1)" class="calendar-header__prev">
+    <img src="../../../../assets/img/icon/icon-left-arrow.png" />
+  </div>
+  <div>
+    {{ selectYearValue }}. {{ monthList[selectMonthValue - 1] }}
+  </div>
+  <div (click)="selectMonth(selectMonthValue + 1)" class="calendar-header__next">
+    <img src="../../../../assets/img/icon/icon-right-arrow.png" />
+  </div>
+</div>
+<div class="calendar-body">
+  <div class="calendar-body__day">
+    <ul>
+      <li *ngFor="let day of dayList">{{ day }}</li>
+    </ul>
+  </div>
+  <div class="calendar-body__date">
+    <div class="calendar-body__date__card-wrapper" 
+      *ngFor="let date of fullCardList; let idx = index;" 
+      [ngClass]="{ 'today-date': checkTodayDate(idx), 'select-mark': checkSelectMark(date) }"
+      (click)="selectDate(date, selectMonthValue)"
+    >
+      <span class="calendar-body__date__card-tooltip">한번 더 클릭해서 상세 일정을 확인해보세요.</span>
+      <div 
+        class="calendar-body__date__card-header" 
+        [ngClass]="{ 'today-mark': checkTodayMark(monthList[todayMonth], date, selectYearValue), 'select-mark': checkSelectMark(date) }"
+      >
+        <div>
+          {{ date }}
+        </div>
+      </div>
+      <div class="calendar-body__date__card-body">
+        <!-- {{ checkTodayDate(idx) ? '일정' : '' }} -->
+      </div>
+    </div>
+  </div>
+</div>
+<app-calendar-detail 
+  *ngIf="isShowDetail" 
+  (event)="closeDetail($event)" 
+  [selectDate]="selectDateValue" 
+  [selectMonth]="tempSelectMonthValue"
+  [selectYear]="selectYearValue"
+  >
+</app-calendar-detail>

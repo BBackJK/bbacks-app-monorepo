@@ -1,0 +1,24 @@
+<div class="home-container">
+  <div class="home__recent-wrapper">
+    <div class="home__recent__calendar-wrapper">
+      <div class="home__recent__calendar-title">
+        <app-text textSize="title">오늘 일정</app-text>
+        <app-button size="sm" style="float: right;" routerLink="/calendar">더 보기</app-button>
+      </div>
+      <div class="home__recent__calendar-contents">
+        일정이 없습니다.
+      </div>
+    </div>
+  </div>
+  <div class="home__time-wrapper">
+    <div>
+      <app-text textSize="lg">{{ years }}</app-text>
+    </div>
+    <div>
+      <app-text textSize="xl">{{ months }}. {{ dates }}. ({{ days }})</app-text>
+    </div>
+    <div>
+      <app-text textSize="max">{{ hours }} : {{ minutes }} : {{ seconds }}</app-text>
+    </div>
+  </div>
+</div>

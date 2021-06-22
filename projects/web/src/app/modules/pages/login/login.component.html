@@ -1,0 +1,45 @@
+<app-flex-container>
+  <div class="login-form-wrapper">
+    <div class="login-form-title">
+      <app-text type="block" textSize="title">
+        로그인
+      </app-text>
+    </div>
+    <form>
+      <div class="login-form__input__group">
+        <div class="login-form__input__label__group">
+          <app-text>이메일</app-text>
+          <app-input placeholder="이메일을 입력하세요!"></app-input>
+        </div>
+        <div class="login-form__input__label__group">
+          <app-text>비밀번호</app-text>
+          <app-input placeholder="비밀번호를 입력하세요!"></app-input>
+        </div>
+      </div>
+      <div class="login-form__button__group">
+        <button>로그인</button>
+        <button>카카오톡</button>
+        <button>구글</button>
+      </div>
+    </form>
+    <div class="login-form__helper__group">
+      <app-text type="block" textSize="sm">
+        회원이 아니세요? 지금 간단하게
+        <span class="login-form__helper__link" routerLink="/register">
+          회원가입
+        </span>
+        해보세요!
+      </app-text>
+      <app-text type="block" textSize="sm">
+        <span class="login-form__helper__link" routerLink="/find-email">
+          이메일
+        </span>
+        혹은
+        <span class="login-form__helper__link" routerLink="/reset-password">
+          비밀번호
+        </span>
+        를 잃어버리셨나요?
+      </app-text>
+    </div>
+  </div>
+</app-flex-container>

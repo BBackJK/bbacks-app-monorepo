@@ -1,0 +1,209 @@
+@import './variables';
+@import './colors';
+
+/**
+* =======================================================
+* Typography
+* =======================================================
+* - Base
+* - Paragraphs
+* - Headings
+* - Type sizes
+* - Misc
+* - Utilities
+*/
+html {
+  font-size: $default-font-size-per;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: $font-family-base;
+  line-height: $leading-base;
+  color: $text-dark-color;
+  font-size: getFontSize(base-rem);
+  // Add ligatures
+  font-feature-settings: "liga", "dlig", "hist";
+  font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+
+  // Two ways to smoothen type, they are disabled by default
+	// Enable only one of them if you need them
+	// 1.
+	// -webkit-font-smoothing: antialiased;
+	//    -moz-font-smoothing: antialiased;
+	// font-smooth:always;
+
+	// 2.
+	// opacity: 0.99;
+}
+
+/**
+* Paragraphs
+*/
+p {
+  font-family: $font-family-base;
+  margin-top: 0;
+  margin-bottom: $baseline;
+
+  // Measure - ideally about 65 chars per line
+	// max-width: #{type(base) * 30}px;
+}
+
+/**
+* Headings
+*/
+h1
+,h2
+,h3
+,h4
+,h5
+,h6 {
+  margin: 0;
+  font-family: $font-family-headings;
+  font-weight: $font-weight-headings;
+  line-height: $line-height-headings;
+  text-rendering: optimizeLegibility; // fix the character spacing for headings
+  margin-top: 0;
+  margin-bottom: $baseline;
+
+  small {
+    font-weight: normal;
+  }
+}
+
+// Only give these headings a margin-top if they are after other elements
+* + h1
+, * + .h1
+, * + .alpha
+, * + h2
+, * + .h2
+, * + .beta
+, * + h3
+, * + .h3
+, * + .gamma
+, * + h4
+, * + .h4
+, * + .delta {
+  margin-top: $baseline;
+}
+
+small {
+  // font-size: 80%;
+  font-size: getFontSize(base-rem) * 0.08;
+}
+
+/**
+* Miscellaneous
+*/
+strong
+, b {
+  font-weight: $font-weight-bold;
+}
+
+em
+, i {
+  font-style: italic;
+}
+
+// Abbreviations and acronyms
+abbr[title] {
+  border-bottom: 1px dotted #ddd;
+  cursor: help;
+}
+
+/**
+* Blockquotes
+*/
+blockquote {
+  padding-left: 10px;
+  margin: $baseline;
+  border-left: 4px solid lighten(#000, 80%);
+
+  p {
+    margin-bottom: 0;
+    font-weight: 300;
+  }
+
+  small {
+    display: block;
+    color: lighten(#000, 70%);
+
+    &::before {
+      content: '\2014 \00A0';
+    }
+  }
+}
+
+/**
+* Quotes
+*/
+q
+, blockquote {
+  &::before
+  , &::after {
+    content: "";
+  }
+}
+
+cite {
+  font-style: normal;
+}
+
+// Addresses styling not present in S5, Chrome
+dfn {
+  font-style: italic;
+}
+
+// Addresses styling not present in IE 6/7/8/9
+mark {
+  background: $yellow;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Prevents sub and sup affecting line-height in all browsers
+sub
+, sup {
+  // font-size: 75%;
+  font-size: getFontSize(base-rem) * 0.75;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+samp { font-family: $font-family-mono; }
+
+
+/**
+* Utilities
+*/
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// @include ko-text-selection($color-selection, $color-selection-bg);
+
+// Horizontal rules
+hr {
+  margin: ($baseline) 0;
+  border: 0;
+  height: 1px;
+  background-color: $hr-color;
+}
+
+.hyphenate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+

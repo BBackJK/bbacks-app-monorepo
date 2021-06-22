@@ -1,0 +1,15 @@
+<div class="modal-search-container">
+  <div class="modal-search-wrapper">
+    <app-input 
+      display="inline" 
+      width="long"
+      [control]="searchValue"
+      [error]="searchError"
+    ></app-input>
+    <img src="../../../../../assets/img/icon/icon-search.png" (click)="onSubmitSearch()">
+  </div>
+  <div class="modal-search-label" [ngSwitch]="searchError">
+    <app-text textColor="error" textSize="xs" text="에러메세지" *ngSwitchCase="true"></app-text>
+    <app-text textColor="error" textSize="xs" text="&nbsp;" *ngSwitchCase="false"></app-text>
+  </div>
+</div>

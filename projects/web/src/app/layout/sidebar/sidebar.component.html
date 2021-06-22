@@ -1,0 +1,15 @@
+<div class="side-bar-contents">
+  <div class="nav-toggle">
+    <!-- <div class="nav-toggle__top"></div>
+    <div class="nav-toggle__bottom"></div> -->
+    <span (click)="onCloseSidebar()">X</span>
+  </div>
+  <ul>
+    <li (click)="onCloseSidebar()" routerLink="/calendar">
+      <a>캘린더</a>
+    </li>
+    <li (click)="onCloseSidebar()" routerLink="/diary">
+      <a>일기장</a>
+    </li>
+  </ul>
+</div>

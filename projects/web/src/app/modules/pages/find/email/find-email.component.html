@@ -1,0 +1,31 @@
+<app-flex-container>
+  <div class="find-email-form-wrapper">
+    <div class="find-email-form-title">
+      <app-text textSize="title" type="block">이메일 찾기</app-text>
+    </div>
+    <form>
+      <div class="find-email-form__input__group">
+        <div class="find-email-form__input__label__group">
+          <div class="find-email-form__label">
+            <app-text textSize="lg">이름</app-text>
+          </div>
+          <div class="find-email-form__input">
+            <app-input display="inline" placeholder="이름을 입력하세요!"></app-input>
+          </div>
+        </div>
+        <div class="find-email-form__input__label__group">
+          <div class="find-email-form__label">
+            <app-text textSize="lg">휴대폰</app-text>
+          </div>
+          <div class="find-email-form__input">
+            <app-input display="inline" placeholder="핸드폰 번호를 입력하세요!"></app-input>
+          </div>
+        </div>
+      </div>
+      <div class="find-email-form__button__group">
+        <app-button color="primary">찾기</app-button>
+        <app-button display="bordered" (click)="goBack()">뒤로가기</app-button>
+      </div>
+    </form>
+  </div>
+</app-flex-container>

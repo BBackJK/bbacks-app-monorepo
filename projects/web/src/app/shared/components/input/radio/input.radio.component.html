@@ -1,0 +1,27 @@
+<!-- input in form start -->
+<label class="radio-wrapper-label" [ngClass]="[displayClassName]" *ngIf="formControl; else noFormControl">
+  <span class="radio-circle-container">
+    <input type="radio" [value]="value" [formControl]="formControl" [name]="groupName"/>
+    <span class="radio-outer-circle"></span>
+    <span class="radio-inner-circle"></span>
+  </span>
+  <span class="radio-contents">
+    {{ label }}
+  </span>
+</label>
+<!-- input in form end -->
+
+<!-- input no form start -->
+<ng-template #noFormControl>
+  <label class="radio-wrapper-label" [ngClass]="[displayClassName]">
+    <span class="radio-circle-container">
+      <input type="radio" [value]="value" [name]="groupName"/>
+      <span class="radio-outer-circle"></span>
+      <span class="radio-inner-circle"></span>
+    </span>
+    <span class="radio-contents">
+      {{ label }}
+    </span>
+  </label>
+</ng-template>
+<!-- input no form end -->
