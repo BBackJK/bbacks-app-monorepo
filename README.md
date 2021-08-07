@@ -6,6 +6,11 @@ if angular use ng-universal for Nest.js, angular cannot use setInterval first lo
 
 so, i make this repository.
 
+## dependency add
+
+```
+> yarn workspace @projects/[foldername or each folder package.json name] add [dependency name]
+```
 ## Start
 
 ```
