@@ -207,3 +207,23 @@ hr {
   hyphens: auto;
 }
 
+@media screen and (max-width: getBp(lg)) { 
+  html {
+    font-size: 60%;
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+@media screen and (max-width: getBp(md)) { 
+  html {
+    font-size: 45%;
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+@media screen and (max-width: getBp(sm)) { 
+  html {
+    font-size: 25.5%;
+    -webkit-text-size-adjust: 100%;
+  }
+}

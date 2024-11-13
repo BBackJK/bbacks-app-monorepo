@@ -8,6 +8,7 @@ export class HeaderComponent implements OnInit {
 
   // @Output() openSidebar = new EventEmitter();
   @Output() openSearch = new EventEmitter();
+  @Output() openSidebar = new EventEmitter();
 
   constructor() {}
 
@@ -20,5 +21,9 @@ export class HeaderComponent implements OnInit {
 
   onOpenSearch(): void {
     this.openSearch.emit();
-  }  
+  }
+
+  onOpenSidebar(): void {
+    this.openSidebar.emit();
+  }
 }

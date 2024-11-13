@@ -13,13 +13,12 @@
   gap: 5px 5px;
 
   /** container를 중앙으로 맞추기 위한 css **/
-  width: 90%;
+  // width: 90%;
   margin-left: auto;
   margin-right: auto;
 
   background-color: $bright;
 
-  box-shadow: $default-box-shadow;
   border-radius: 1rem;
 }
 
@@ -121,5 +120,36 @@ li {
     margin-top: -24px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+  }
+}
+
+@media screen and (min-width: getBp(xl) + 1px) { 
+  .grid-container {
+    width: 90%;
+    box-shadow: $default-box-shadow;
+  }
+}
+
+@media screen and (max-width: getBp(xl)) { 
+  .grid-container {
+    width: 90%;
+    box-shadow: $default-box-shadow;
+  }
+}
+
+@media screen and (max-width: getBp(lg)) { 
+  .grid-container {
+    width: 90%;
+    box-shadow: $default-box-shadow;
+  }
+}
+
+@media screen and (max-width: getBp(md)) { 
+  .grid-container {
+    width: 100%;
+    box-shadow: none;
+  }
+  .grid-menu-bar {
+    display: none;
   }
 }

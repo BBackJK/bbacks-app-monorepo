@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxsModule } from '@ngxs/store';
@@ -21,6 +22,7 @@ import { PagesModule } from '@modules/pages/pages.module';
     AppRoutingModule
     , BrowserModule
     , BrowserAnimationsModule
+    , HttpClientModule
     , NgxsModule.forRoot([
       // in your states
     ], { developmentMode: !environment.production })

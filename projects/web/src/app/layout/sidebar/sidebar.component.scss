@@ -2,7 +2,7 @@
 
 .side-bar-contents {
   position: absolute;
-  width: 400px;
+  width: 40rem;
   right: 0px;
   background: $bright;
   height: 100%;
@@ -25,16 +25,22 @@ li {
 
   border-radius: 10px;
   text-align: center;
-}
 
-
-li:hover {
   background-color: getPrimaryColor();
 
   & > a {
     color: $bright;
   }
 }
+
+
+// li:hover {
+//   background-color: getPrimaryColor();
+
+//   & > a {
+//     color: $bright;
+//   }
+// }
 
 .nav-toggle {
   display: inline;
@@ -50,3 +56,33 @@ li:hover {
     transition: all ease-in-out 300ms;
   }
 }
+
+.img-wrapper {
+  width: 3rem;
+  height: 3rem;
+  padding-top: 5px;
+  margin-left: 3px;
+  display: inline-block;
+}
+
+.search-wrapper {
+  display: flex;
+  position: fixed;
+  bottom: 5rem;
+
+  & > .img-wrapper > img {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+}
+
+.modal-search-label {
+  // display: block;
+  position: fixed;
+  bottom: 2rem;
+  right: 16rem;
+  justify-content: center;
+  text-align: center;
+}
+

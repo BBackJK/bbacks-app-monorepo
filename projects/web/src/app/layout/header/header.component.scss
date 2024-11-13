@@ -26,6 +26,20 @@ header {
 
 .nav-toggle {
   float: right;
+  transition: $default-transition;
+
+  & > div {
+    width: 40px;
+    height: 8px;
+    margin: 10px;
+    margin-right: 50px;
+    background-color: $dark;
+    border-radius: 5px;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 .nav-container-search {
@@ -41,4 +55,41 @@ header {
 
 .nav-container-search, .nav-container-login {
   padding: 10px;
+}
+
+
+@media screen and (min-width: getBp(xl) + 1px) { 
+  .nav-container__mobile {
+    display: none;
+  }
+  .nav-container {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: getBp(xl)) { 
+  .nav-container__mobile {
+    display: none;
+  }
+  .nav-container {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: getBp(lg)) { 
+  .nav-container__mobile {
+    display: none;
+  }
+  .nav-container {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: getBp(md)) { 
+  .nav-container__mobile {
+    display: inline-block;
+  }
+  .nav-container {
+    display: none;
+  }
 }

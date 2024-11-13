@@ -11,6 +11,7 @@
     ></app-header> -->
     <app-header 
       (openSearch)="openSearch($event)"
+      (openSidebar)="openSidebar($event)"
     ></app-header>
   </div>
   <div class="grid-menu-bar">
@@ -20,13 +21,13 @@
     <app-content></app-content>
   </div>
   <app-shadow-cover [display]="openBox === 'search' ? 'center' : ''" *ngIf="openBox" [ngSwitch]="openBox">
-    <!-- for sidebar
+    <!-- for sidebar -->
       <app-sidebar
       appClickOutSide 
       *ngSwitchCase="'sidebar'"
-      (clickOutSide)="closeSidebar($event)" 
+      (clickOutSide)="closeSidebar($event)"
       (closeSidebar)="closeSidebar($event)"
-    ></app-sidebar> -->
+    ></app-sidebar>
     <app-modal-search 
       appClickOutSide
       *ngSwitchCase="'search'"

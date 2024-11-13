@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 
 @Component({
@@ -6,7 +6,7 @@ import { ViewportScroller } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   _pageYOffset: number = 0;
   openBox: string = '';
 
@@ -17,6 +17,8 @@ export class AppComponent {
   constructor(
     private viewPortScroller: ViewportScroller
   ) {}
+
+  ngOnInit(): void {}
 
   closeSidebar(event): void {
     this.openBox = '';
